@@ -1,4 +1,4 @@
-if theme.avatar
-  img.post-avatar(height="48" width="48" src!=url_for(theme.avatar))
-else if theme.email
-  img.post-avatar(height="48" width="48" src!=gravatar(theme.email, 48))
+if config.avatar
+  img.post-avatar(height="48" width="48" src!=url_for(config.avatar))
+else if config.email
+  img.post-avatar(height="48" width="48" src!=gravatar(config.email, 48))

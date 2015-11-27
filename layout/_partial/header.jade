@@ -1,8 +1,9 @@
 h1.brand-title
-  a(href!=url_for()) #{theme.title}
-h2.brand-tagline #{theme.description}
+  a(href!=url_for()) #{config.title}
+h2.brand-tagline #{config.subtitle}
+h3.brand-description #{config.description}
 nav.nav
   ul.nav-list
-    each path, name in theme.menu
+    each path, name in config.menu
       li.nav-item
         a.pure-button(href!=url_for(path)) #{name}

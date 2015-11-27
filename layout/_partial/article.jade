@@ -12,15 +12,15 @@
     !=partial('post/gallery')
     if post.excerpt && index
       !=post.excerpt
-      if theme.excerpt_link
+      if config.excerpt_link
         p.post-excerpt-link
-          a(href!=url_for(post.path) + "#more") #{theme.excerpt_link}
+          a(href!=url_for(post.path) + "#more") #{config.excerpt_link}
     else
       !=post.content
   if !index
     !=partial('post/nav')
   if !index && post.comments
-    if theme.disqus_shortname
+    if config.disqus_shortname
       #disqus_thread
-    else if theme.duoshuo_shortname
+    else if config.duoshuo_shortname
       .ds-thread(data-thread-key="#{post.layout}-#{post.slug}" data-title=post.title data-url=post.permalink)

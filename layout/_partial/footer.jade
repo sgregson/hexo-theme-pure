@@ -1,13 +1,17 @@
 .social-link
-  a(href="http://weibo.com/" + (theme.weibo ? theme.weibo : "") target="_blank")
-    i.icon-weibo
-  a(href="https://github.com/" + (theme.github ? theme.github : "") target="_blank")
-    i.icon-github
-  a(href="https://plus.google.com/" + (theme.gplus ? theme.gplus : "") target="_blank")
-    i.icon-gplus
-  a(href="https://twitter.com/" + (theme.twitter ? theme.twitter : "") target="_blank")
-    i.icon-twitter
+  if config.weibo
+    a(href="http://weibo.com/" + (config.weibo) target="_blank")
+      i.icon-weibo
+  if config.github
+    a(href="https://github.com/" + (config.github) target="_blank")
+      i.icon-github
+  if config.gplus
+    a(href="https://plus.google.com/" + (config.gplus) target="_blank")
+      i.icon-gplus
+  if config.twitter
+    a(href="https://twitter.com/" + (config.twitter) target="_blank")
+      i.icon-twitter
 .copyright
-  | &copy; #{date(new Date(), 'YYYY')} #{theme.author}.
+  | &copy; #{date(new Date(), 'YYYY')} #{config.author}.
   | Powered by <a href="http://hexo.io" target="_blank">Hexo</a>
   | using <a href="https://github.com/saintwinkle/hexo-theme-pure" target="_blank">Pure</a> theme.
