@@ -82,6 +82,10 @@ a:focus {
   background-color: #fff;
   transition: transform 300ms ease-in-out, margin-left 300ms ease-in-out, opacity 150ms ease-in-out;
 
+  @include respond-to('md') {
+    padding: 2em 3em 0;
+    min-height: 100vh; //at least viewport height for sidebar transition effect
+  }
   .is-withSidebar & {
     transform: perspective(60em) rotateY(5deg);
     transform-origin: left;
@@ -92,9 +96,6 @@ a:focus {
     }
   }
 
-  @include respond-to('md') {
-    padding: 2em 3em 0;
-  }
 }
 
 .brand-title,
