@@ -1,5 +1,5 @@
-!=js('js/script')
-if theme.disqus_shortname
+!=js('js/jquery-2.1.4.min.js', 'js/script')
+if config.disqus_shortname
   script.
     var disqus_shortname = '#{config.disqus_shortname}';
     (function() {

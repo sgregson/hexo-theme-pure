@@ -7,3 +7,15 @@ var imgs = document.querySelectorAll('.post-content img')
 for (var i = 0; i < imgs.length; i++) {
   imgs[i].setAttribute('class','pure-img')
 }
+
+// Shorthand for $( document ).ready()
+$(function() {
+  console.log('hi');
+
+  var $sidebarTrigger = $('.js-sidebar-trigger'),
+      $layout = $('#layout');
+
+  $sidebarTrigger.on('click', function() {
+    $layout.toggleClass('is-withSidebar');
+  });
+});
