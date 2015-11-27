@@ -52,7 +52,10 @@ a:focus {
 
   @include respond-to('md') {
     transform: translateX(-100%);
+    position: fixed;
     width: 25%;
+    top: 0;
+    bottom: 0;
     z-index: 1;
 
     &:after {
@@ -70,9 +73,6 @@ a:focus {
     }
 
     .is-withSidebar & {
-      position: fixed;
-      top: 0;
-      bottom: 0;
       transform: translateX(0%)
     }
   }
