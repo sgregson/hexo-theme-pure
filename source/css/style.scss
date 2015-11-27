@@ -87,10 +87,10 @@ a:focus {
     min-height: 100vh; //at least viewport height for sidebar transition effect
 
     .is-withSidebar & {
-        transform: perspective(60em) rotateY(5deg);
-        transform-origin: left;
-        opacity: 0.3;
-        margin-left: 25%;
+      transform: perspective(60em) rotateY(5deg);
+      transform-origin: left;
+      opacity: 0.3;
+      margin-left: 25%;
     }
   }
 }
