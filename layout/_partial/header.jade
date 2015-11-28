@@ -1,6 +1,8 @@
 h1.brand-title
   a(href!=url_for()) #{config.title}
-h2.brand-tagline #{config.subtitle}
+h2.brand-tagline
+  each name, id in config.subtitle
+    div.tagline #{name}
 h3.brand-description #{config.description}
 nav.nav
   ul.nav-list
