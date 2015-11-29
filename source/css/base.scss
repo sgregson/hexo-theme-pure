@@ -7,11 +7,52 @@
 
 a {
   text-decoration: none;
-  color: rgb(61, 146, 201);
+  color: $colorLink--base;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom: 0;
+    border-bottom-width: 1px;
+    border-bottom-color: inherit;
+    border-bottom-style: solid;
+    transform: translateX(-50%);
+    transition: width 150ms ease-in-out;
+    width: 0;
+    h1 & {
+      border-bottom-width: 3px;
+    }
+    h2 & {
+      border-bottom-width: 2px;
+    }
+  }
+  &:hover,
+  &:focus {
+    &:after {
+      width: 100%;
+    }
+  }
 }
-a:hover,
-a:focus {
-  text-decoration: underline;
+button {
+  background: transparent;
+  border: 2px solid rgb(176, 202, 219);
+  margin-top: 1em;
+  margin-left: 0.5em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 85%;
+  padding: .5em 1em;
+
+  &:hover,
+  &:focus {
+    border: 2px solid rgb(61, 146, 201);
+    text-decoration: none;
+  }
+  aside & {
+    color: #fff;
+  }
 }
 
 .pure-img-responsive {

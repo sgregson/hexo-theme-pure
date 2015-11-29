@@ -1,0 +1,13 @@
+.u-fl {
+  float: left;
+}
+
+// Clearfix
+.u-cf:before,
+.u-cf:after {
+  content: '';
+  display: table;
+}
+.u-cf:after {
+  clear: both;
+}
