@@ -9,7 +9,7 @@ div(class=classes)
     if post.link || post.title
       h2.post-title
         !=partial('post/title')
-    div.post-meta.u-cf
+    div.post-meta
       !=partial('post/date', {date_format: 'YYYY-MM-DD HH:mm'})
       !=partial('post/category')
       !=partial('post/tag')

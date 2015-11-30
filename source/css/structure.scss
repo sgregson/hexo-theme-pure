@@ -14,7 +14,7 @@
     transform: translateY(-50%);
     overflow-y: auto;
 
-    padding: 1em 2em 0;
+    padding: 1em 2em;
     margin: 0; // overrides default
     text-align: right;
   }
@@ -23,7 +23,7 @@
   $bgColor-sidebar: rgb(61, 79, 93);
   background: $bgColor-sidebar;
   color: #fff;
-  transition: transform 300ms ease-in-out;
+  transition: transform 500ms ease-in-out 200ms;
 
   @include respond-to('md') {
     transform: translateX(-100%);
@@ -55,9 +55,9 @@
 .content {
   padding: 2em 1em 0;
   background-color: #fff;
-  transition: transform 200ms ease-in-out 100ms,
-              left 300ms ease-in-out,
-              opacity 300ms linear;
+  transition: transform 500ms ease-in-out,
+              left 500ms ease-in-out 200ms,
+              opacity 350ms linear 200ms;
 
   @include respond-to('md') {
     padding: 2em 3em 0;

@@ -1,10 +1,28 @@
 * {
-  font-family: "Lucida Grande", "Lucida Sans Unicode", Lucida, Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Lucida, Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
 
+%button--base {
+  display: inline-block;
+  background: transparent;
+  color: #d9d9d9;
+  border: 2px solid;
+  border-color: inherit;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 85%;
+  transition: color 300ms ease-in-out, border-color 300ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: rgb(61, 146, 201);
+    border-color: rgb(61, 146, 201);
+    text-decoration: none;
+  }
+}
 a {
   text-decoration: none;
   color: $colorLink--base;
@@ -19,7 +37,7 @@ a {
     border-bottom-color: inherit;
     border-bottom-style: solid;
     transform: translateX(-50%);
-    transition: width 150ms ease-in-out;
+    transition: width 300ms ease-in-out;
     width: 0;
     h1 & {
       border-bottom-width: 3px;
@@ -36,23 +54,31 @@ a {
   }
 }
 button {
-  background: transparent;
-  border: 2px solid rgb(176, 202, 219);
-  margin-top: 1em;
+  @extend %button--base;
   margin-left: 0.5em;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  font-size: 85%;
-  padding: .5em 1em;
+}
+.button {
+  @extend %button--base;
+  padding: .15em 1em;
 
-  &:hover,
-  &:focus {
-    border: 2px solid rgb(61, 146, 201);
-    text-decoration: none;
-  }
   aside & {
     color: #fff;
+    padding: .5em 1em;
+    border: 2px solid rgb(176, 202, 219);
+    margin-top: 1em;
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
   }
+}
+.button--overlay {
+  @extend %button--base;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .pure-img-responsive {

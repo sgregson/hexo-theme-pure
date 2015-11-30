@@ -16,5 +16,5 @@ else
         !=partial('archive-post', {post: post})
   - })
 if page.total > 1
-  nav#page-nav
+  nav#page-nav.u-cf
     !=paginator({prev_text: '&laquo; Prev', next_text: 'Next &raquo;'})

@@ -1,7 +1,7 @@
 if (post.categories && post.categories.length)
-  div.post-categories.u-fl
+  span.post-categories
     - post.categories.each(function (category) {
-        button.post-category(href!=url_for(category.path))
+        a.button.post-category(href!=url_for(category.path))
           i.icon-book
           | #{category.name}
     - })

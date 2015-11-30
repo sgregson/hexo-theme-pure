@@ -8,4 +8,4 @@ nav.nav
   ul.nav-list
     each path, name in config.menu
       li.nav-item
-        button(href!=url_for(path)) #{name}
+        a.button(href!=url_for(path)) #{name}

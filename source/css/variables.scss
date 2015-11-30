@@ -1,9 +1,25 @@
 $breakpoints: (
   'sm': (min-width: 30em),
   'md': (min-width: 48em),
+  'max-md': (max-width: 48em),
   'lg': (min-width: 60em),
   'xl': (min-width: 80em)
 );
 
 $colorLink--base: #3d92c9;
 $colorLink--hover: #b0cadb;
+
+@mixin respond-to($name) {
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. '
+        + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
