@@ -1,6 +1,5 @@
 @import 'variables';
 @import 'utilities';
-@import 'animations';
 
 @import 'base';
 @import 'structure';
@@ -48,7 +47,7 @@
   *display: inline;
   zoom: 1;
   margin-left: 1em;
-  
+
   &:first-child {
     margin-left: 0;
   }
