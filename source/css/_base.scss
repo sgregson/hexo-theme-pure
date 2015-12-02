@@ -27,7 +27,7 @@ a {
   text-decoration: none;
   color: $colorLink--base;
   position: relative;
-  &[href*="//"]:not([href*="sgregson.github.io"]) {
+  &[target*='_blank'] {
     // External Link Styles
     .post & {
       &:after {
