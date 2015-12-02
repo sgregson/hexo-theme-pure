@@ -1,0 +1,47 @@
+.brand-title,
+.brand-tagline {
+  margin: 0;
+}
+.brand-title {
+  text-transform: uppercase;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+.brand-tagline {
+  font-weight: 300;
+  color: rgb(176, 202, 219);
+  height: 1.2em;
+  overflow: hidden;
+}
+@keyframes taglines {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.2em);
+  }
+  100% {
+    transform: translateY(-2.4em);
+  }
+}
+.tagline {
+  animation: taglines 2s infinite both alternate;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav-item {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  margin-left: 1em;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}

@@ -27,8 +27,18 @@ a {
   text-decoration: none;
   color: $colorLink--base;
   position: relative;
-
-  &:after {
+  &[href*="//"]:not([href*="sgregson.github.io"]) {
+    // External Link Styles
+    .post & {
+      &:after {
+        font-family: fontawesome;
+        content: ' \f08b';
+        font-size: .67em;
+        vertical-align: middle;
+      }
+    }
+  }
+  &:before {
     position: absolute;
     content: '';
     left: 50%;
@@ -48,7 +58,7 @@ a {
   }
   &:hover,
   &:focus {
-    &:after {
+    &:before {
       width: 100%;
     }
   }

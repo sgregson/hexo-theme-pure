@@ -4,54 +4,7 @@
 @import 'base';
 @import 'structure';
 
-
-.brand-title,
-.brand-tagline {
-  margin: 0;
-}
-.brand-title {
-  text-transform: uppercase;
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-}
-.brand-tagline {
-  font-weight: 300;
-  color: rgb(176, 202, 219);
-  height: 1.2em;
-  overflow: hidden;
-}
-@keyframes taglines {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-1.2em);
-  }
-  100% {
-    transform: translateY(-2.4em);
-  }
-}
-.tagline {
-  animation: taglines 2s infinite both alternate;
-}
-
-.nav-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.nav-item {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  margin-left: 1em;
-
-  &:first-child {
-    margin-left: 0;
-  }
-}
+@import 'nav';
 
 .content-subhead {
   text-transform: uppercase;
@@ -63,78 +16,7 @@
   letter-spacing: 0.1em;
 }
 
-// POST STYLES
-.post {
-  padding-bottom: 2em;
-
-  &-title {
-    font-size: 2em;
-    color: #222;
-    margin-bottom: 0.2em;
-  }
-  &-avatar {
-    border-radius: 50%;
-    float: right;
-    margin-right: 1em;
-  }
-  &-content {
-    color: #444;
-    line-height: 1.8em;
-  }
-  &-meta {
-    color: #999;
-    font-size: 90%;
-    margin: 1em 0 0;
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid #ddd;
-
-    > span:first-child {
-      margin-left: 0;
-    }
-    .archive-post & {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
-  }
-  &-date {
-    white-space: nowrap;
-  }
-  &-author,
-  &-date,
-  &-categories,
-  &-tags {
-    margin-left: 2em;
-  }
-  &-category,
-  &-tag {
-    margin: 0 0.5em 0 0;
-    padding: 0.15em 1em;
-    color: #d9d9d9;
-    font-size: 80%;
-
-    .archive-post & {
-      z-index: 10;
-    }
-    @include respond-to('max-md') {
-      display: none;
-    }
-  }
-  // Post Category Types
-  &-category {
-    &-design {
-      background: #5aba59;
-    }
-    &-pure {
-      background: #4d85d1;
-    }
-    &-yui {
-      background: #8156a7;
-    }
-    &-js {
-      background: #df2d4f;
-    }
-  }
-}
+@import 'post';
 
 .archive {
   &-year a {
@@ -162,13 +44,6 @@
       }
     }
   }
-}
-.archive-post-meta {
-  color: #999;
-  font-size: 90%;
-  margin: 1em 0 0;
-  position: relative;
-  z-index: 10;
 }
 
 .post-images {
