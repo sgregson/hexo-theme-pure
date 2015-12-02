@@ -38,13 +38,18 @@
       font-weight: normal;
       font-style: normal;
 
-      content: 'menu';
+      content: '\f0c9';
       position: absolute;
       left: 100%;
       line-height: 40px;
       padding: 0 1em;
       background-color: $bgColor-sidebar;
       text-align: center;
+      cursor: pointer;
+
+      .is-withSidebar & {
+        content: '\f057';
+      }
     }
 
     .is-withSidebar & {
