@@ -1,7 +1,9 @@
-- var classes = ['post']
-- post.categories.each(function (category) {
-- classes += ' cat-' + category.name
-- })
+- var classes = [post.layout]
+- if(post.categories && post.categories.length) {
+-   post.categories.each(function (category) {
+-     classes += ' cat-' + category.name
+-   })
+- }
 
 article(class=classes)
   .post-header.u-cf
