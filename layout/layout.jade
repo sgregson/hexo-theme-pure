@@ -3,11 +3,11 @@ html
   head
     !=partial('_partial/head')
   body
-    #layout.layout.pure-g
-      aside.sidebar.pure-u-1.js-sidebar-trigger
+    #layout.layout
+      aside.sidebar.js-sidebar-trigger
         .header
           !=partial('_partial/header')
-      main.content.pure-u-1
+      main.content
         .posts
           !=body
         .footer

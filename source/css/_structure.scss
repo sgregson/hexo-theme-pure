@@ -5,7 +5,8 @@
 .header {
   text-align: center;
   top: auto;
-  margin: 3em auto;
+  margin: 0 auto;
+  padding: 2em 0;
 
   @include respond-to('md') {
     position: absolute;
@@ -81,7 +82,7 @@
 
     .is-withSidebar & {
       margin-left: 250px;
-      transform: perspective(450em) rotateY(40deg);
+      transform: perspective(450em) rotateY(46deg);
       opacity: 0.3;
     }
   }
