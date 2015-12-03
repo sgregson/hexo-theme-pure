@@ -70,6 +70,8 @@ button {
 .button {
   @extend %button--base;
   padding: .15em 1em;
+  color: #7a7a8b;
+  border-color: #7a7a8b;
 
   aside & {
     color: #fff;

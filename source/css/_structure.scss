@@ -23,7 +23,8 @@
   $bgColor-sidebar: rgb(61, 79, 93);
   background: $bgColor-sidebar;
   color: #fff;
-  transition: transform 500ms ease-in-out 200ms;
+  transition: transform 500ms ease-in-out 200ms,
+              width 500ms ease-in-out;
 
   @include respond-to('md') {
     position: fixed;
@@ -71,6 +72,7 @@
     position: relative;
     width: 75%;
     left: 25%;
+    right: 0;
   }
   @include respond-to('md-only') {
     padding: 2em 3em 0;
