@@ -8,10 +8,13 @@ $breakpoints: (
   'xl': (min-width: 80em)
 );
 
-$fa-css-prefix:       icon;
+$fa-css-prefix: icon;
+$tagline-count: 6; // number of items in config.subtitle array
+$tagline-animation-time: 10;
 
 $colorLink--base: #3d92c9;
 $colorLink--hover: #b0cadb;
+$colorButton--base: #999;
 
 @mixin respond-to($name) {
   @if map-has-key($breakpoints, $name) {

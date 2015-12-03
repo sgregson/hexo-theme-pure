@@ -15,19 +15,30 @@
   height: 1.2em;
   overflow: hidden;
 }
+
 @keyframes taglines {
+  $count: 100 / $tagline-count;
   0% {
-    transform: translateY(0);
+    opacity: 0;
   }
-  50% {
-    transform: translateY(-1.2em);
+  #{$count - 5}% {
+    opacity: 1;
   }
-  100% {
-    transform: translateY(-2.4em);
+  #{$count * 2}% {
+    opacity: 0;
   }
 }
 .tagline {
-  animation: taglines 2s infinite both alternate;
+  height: 0; // allows taglines to overlap without pos:abs
+  opacity: 0;
+
+  @for $i from 0 to $tagline-count {
+    &:nth-child(#{$i + 1}) {
+      animation: taglines #{$tagline-animation-time}s infinite;
+      animation-timing-function: ease-in-out;
+      animation-delay: #{$i * $tagline-animation-time / $tagline-count}s;
+    }
+  }
 }
 
 .nav-list {

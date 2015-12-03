@@ -1,7 +1,7 @@
 // POST STYLES
 %meta {
   font-size: 80%;
-  color: #4d4d4f;
+  color: #999;
   vertical-align: super;
 }
 .post {
@@ -19,6 +19,7 @@
     font-size: 2em;
     color: #222;
     margin-bottom: 0.2em;
+    margin-top: 0;
   }
   &-avatar {
     border-radius: 50%;
@@ -31,12 +32,13 @@
   }
   &-date {
     @extend %meta;
-    margin-right: .5em;
     white-space: nowrap;
     display: inline-block;
   }
   &-categories {
     @extend %meta;
+    margin-right: 0.5em;
+    padding-left: 0.2em;
     display: inline-block;
   }
   &-tags {
