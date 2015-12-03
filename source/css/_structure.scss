@@ -62,7 +62,7 @@
   }
 }
 .content {
-  padding: 2em 3em 0;
+  padding: 2em 1em 0;
   background-color: #fff;
   transition: transform 500ms ease-in-out,
               margin-left 500ms ease-in-out 200ms,
@@ -73,6 +73,7 @@
 
   @include respond-to('md') {
     height: 100vh; // viewport height for sidebar transition effect
+    padding: 2em 3em 0;
     margin-left: 0;
   }
   @include respond-to('md-only') {
