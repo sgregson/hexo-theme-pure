@@ -19,7 +19,6 @@
     font-size: 2em;
     color: #222;
     margin-bottom: 0.2em;
-    float: left;
   }
   &-avatar {
     border-radius: 50%;
@@ -32,26 +31,23 @@
   }
   &-date {
     @extend %meta;
-    margin: 3.15em 0 0 2em;
+    margin-right: .5em;
     white-space: nowrap;
-    float: left;
+    display: inline-block;
   }
   &-categories {
     @extend %meta;
-    margin: 3em 0 0 2em;
-    float: left;
-    @include respond-to('max-md') {
-      display: none;
-    }
+    display: inline-block;
   }
   &-tags {
     @extend %meta;
-    float: left;
-    clear: left;
+    @include respond-to('to-sm') {
+      display: none;
+    }
   }
   &-category,
   &-tag {
-    margin: 0 0.5em 0.5em 0;
+    margin: 0 0 0.5em 0.5em;
     padding: 0.15em 1em;
 
     .archive-post & {

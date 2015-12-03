@@ -222,19 +222,8 @@
   font-weight: normal;
   font-style: normal;
   color: #666;
-  margin-right: 0.7em;
 }
-.icon {
-  &-user:before {     content: '\f007'; }
-  &-tags:before {     content: '\f02c'; }
-  &-book:before {     content: '\f02d'; }
-  &-clock:before {    content: '\f073'; }
-  &-facebook:before { content: '\f09a'; }
-  &-github:before {   content: '\f113'; }
-  &-gplus:before {    content: '\f0d5'; }
-  &-twitter:before {  content: '\f099'; }
-  &-weibo:before {    content: '\f18a'; }
-}
+@import 'font-awesome/font-awesome';
 
 blockquote {
   background-color: #ddd;

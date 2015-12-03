@@ -1,11 +1,14 @@
 $breakpoints: (
   'sm': (min-width: 30em),
+  'to-sm': (max-width: 30em),
   'md': (min-width: 48em),
   'md-only': "(min-width: 48em) and (max-width: 60em)",
-  'max-md': (max-width: 48em),
+  'to-md': (max-width: 48em),
   'lg': (min-width: 60em),
   'xl': (min-width: 80em)
 );
+
+$fa-css-prefix:       icon;
 
 $colorLink--base: #3d92c9;
 $colorLink--hover: #b0cadb;
