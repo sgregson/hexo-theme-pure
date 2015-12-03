@@ -1,15 +1,21 @@
 .social-link
-  if config.weibo
-    a(href="http://weibo.com/" + (config.weibo) target="_blank")
+  if config.social.weibo
+    a(href="http://weibo.com/" + (config.social.weibo) target="_blank")
       i.icon-weibo
-  if config.github
-    a(href="https://github.com/" + (config.github) target="_blank")
-      i.icon-github
-  if config.gplus
-    a(href="https://plus.google.com/" + (config.gplus) target="_blank")
+  if config.social.github
+    a(href="https://github.com/" + (config.social.github) target="_blank")
+      i.icon-github-alt
+  if config.social.behance
+    a(href="https://www.behance.net/" + (config.social.behance) target="_blank")
+      i.icon-behance
+  if config.social.linkedin
+    a(href="https://www.linkedin.com/in/" + (config.social.linkedin) target="_blank")
+      i.icon-linkedin
+  if config.social.gplus
+    a(href="https://plus.google.com/" + (config.social.gplus) target="_blank")
       i.icon-gplus
-  if config.twitter
-    a(href="https://twitter.com/" + (config.twitter) target="_blank")
+  if config.social.twitter
+    a(href="https://twitter.com/" + (config.social.twitter) target="_blank")
       i.icon-twitter
 .copyright
   | &copy; #{date(new Date(), 'YYYY')} #{config.author}.

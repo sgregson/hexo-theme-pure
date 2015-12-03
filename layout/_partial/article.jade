@@ -11,8 +11,8 @@ article(class=classes)
     if post.link || post.title
       h2.post-title
         !=partial('post/title')
-    !=partial('post/category')
     !=partial('post/date', {date_format: 'YYYY-MM-DD HH:mm'})
+    !=partial('post/category')
     !=partial('post/tag')
   !=partial('post/links')
   .post-content
