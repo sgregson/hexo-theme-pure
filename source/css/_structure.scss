@@ -40,14 +40,13 @@
 
     &:after {
       font-family: fontawesome;
-      font-weight: normal;
-      font-style: normal;
+      font-size: 1.25em;
 
       content: '\f0c9'; // hamburger menu
       position: absolute;
       left: 100%;
-      line-height: 40px;
-      padding: 0 1em;
+      line-height: 2em;
+      padding: 0 0.6em;
       background-color: $bgColor-sidebar;
       text-align: center;
       cursor: pointer;
