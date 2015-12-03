@@ -38,7 +38,7 @@
   &-categories {
     @extend %meta;
     margin-right: 0.5em;
-    padding-left: 0.2em;
+    padding-left: 0.15em; // fix alignment with tags block
     display: inline-block;
   }
   &-tags {
