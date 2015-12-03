@@ -1,6 +1,7 @@
 $breakpoints: (
   'sm': (min-width: 30em),
   'md': (min-width: 48em),
+  'md-only': "(min-width: 48em) and (max-width: 60em)",
   'max-md': (max-width: 48em),
   'lg': (min-width: 60em),
   'xl': (min-width: 80em)
