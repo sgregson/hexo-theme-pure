@@ -6,7 +6,22 @@
 }
 .post {
   padding-bottom: 2em;
-
+  &-gallery {
+    $heightPostGallery: 60px;
+    height: $heightPostGallery;
+    overflow: hidden;
+    padding: 0;
+    li {
+      display: table-cell;
+      list-style-type: none;
+      vertical-align: top;
+    }
+    img {
+      position: relative;
+      top: $heightPostGallery / 2;
+      transform: translateY(-50%);
+    }
+  }
   &-header {
     padding-bottom: 0.5em;
     border-bottom: 1px solid #ddd;
@@ -30,16 +45,23 @@
     color: #444;
     line-height: 1.8em;
   }
-  &-date {
-    @extend %meta;
-    white-space: nowrap;
-    display: inline-block;
-  }
   &-categories {
     @extend %meta;
     margin-right: 0.5em;
     padding-left: 0.15em; // fix alignment with tags block
     display: inline-block;
+  }
+  &-date {
+    @extend %meta;
+    white-space: nowrap;
+    display: inline-block;
+  }
+  &-roles {
+    @extend %meta;
+    padding-left: 0.25em;
+    @include respond-to('to-sm') {
+      display: none;
+    }
   }
   &-tags {
     @extend %meta;
@@ -48,7 +70,8 @@
     }
   }
   &-category,
-  &-tag {
+  &-tag,
+  &-role {
     margin: 0 0 0.5em 0.5em;
     padding: 0.15em 1em;
 
