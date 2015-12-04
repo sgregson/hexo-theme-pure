@@ -12,9 +12,15 @@ $fa-css-prefix: icon;
 $tagline-count: 6; // number of items in config.subtitle array
 $tagline-animation-time: 10;
 
-$colorLink--base: #3d92c9;
+$boston_blue: #3b91b4; //links
+$oxford_blue: #3d4f5d; //sidebar
+
+$colorLink--base: $boston_blue;
 $colorLink--hover: #b0cadb;
 $colorButton--base: #999;
+
+$colorBorder--base: #d9d9d9;
+$colorBorder--primary: $boston_blue;
 
 @mixin respond-to($name) {
   @if map-has-key($breakpoints, $name) {
