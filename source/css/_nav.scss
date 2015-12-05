@@ -16,18 +16,6 @@
   overflow: hidden;
 }
 
-@keyframes taglines {
-  $count: 100 / $tagline-count;
-  0% {
-    opacity: 0;
-  }
-  #{$count - 5}% {
-    opacity: 1;
-  }
-  #{$count * 2}% {
-    opacity: 0;
-  }
-}
 .tagline {
   height: 0; // allows taglines to overlap without pos:abs
   opacity: 0;

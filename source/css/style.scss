@@ -3,6 +3,9 @@
 @import 'font-awesome';
 @import 'font-firaSans';
 
+%font-awesome {
+  font-family: FontAwesome;
+}
 [class^="icon-"]:before {
   font-family: FontAwesome;
   font-weight: normal;
@@ -18,7 +21,7 @@
 .content-subhead {
   text-transform: uppercase;
   color: #aaa;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $colorBorder--white;
   padding: 0.4em 0;
   font-size: 80%;
   font-weight: 500;

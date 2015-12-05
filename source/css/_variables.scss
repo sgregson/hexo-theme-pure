@@ -12,13 +12,15 @@ $fa-css-prefix: icon;
 $tagline-count: 6; // number of items in config.subtitle array
 $tagline-animation-time: 10;
 
-$boston_blue: #3b91b4; //links
+$boston_blue: #3d92c9; //links
 $oxford_blue: #3d4f5d; //sidebar
+$white: #fff;
 
 $colorLink--base: $boston_blue;
 $colorLink--hover: #b0cadb;
 $colorButton--base: #999;
 
+$colorBorder--white: $white;
 $colorBorder--base: #d9d9d9;
 $colorBorder--primary: $boston_blue;
 
@@ -34,5 +36,28 @@ $colorBorder--primary: $boston_blue;
   @else {
     @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. '
         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+@keyframes taglines {
+  $count: 100 / $tagline-count;
+  0% {
+    opacity: 0;
+  }
+  #{$count - 5}% {
+    opacity: 1;
+  }
+  #{$count * 2}% {
+    opacity: 0;
+  }
+}
+
+@keyframes highlight {
+  0% {
+    color: $colorLink--base;
+    border-left: 0em solid $colorBorder--primary;
+  }
+  100% {
+    border-left: 10em solid $colorBorder--white;
   }
 }
