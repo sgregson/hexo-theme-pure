@@ -98,6 +98,18 @@ button {
   bottom: 0;
 }
 
+//substitute tooltip
+[data-title] {
+  position: relative;
+
+  &:hover:before {
+    content: attr(data-title);
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    white-space: nowrap;
+  }
+}
 .pure-img-responsive {
   max-width: 100%;
   height: auto;
