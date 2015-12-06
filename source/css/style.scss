@@ -87,6 +87,7 @@
 #post-nav {
   zoom: 1;
   position: relative;
+  clear: both;
 
   @include respond-to('md') {
     margin: 3.125em 0;

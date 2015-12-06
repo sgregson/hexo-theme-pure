@@ -16,8 +16,8 @@ article(class=classes)
     !=partial('post/role')
     !=partial('post/tag')
   !=partial('post/links')
+  !=partial('post/gallery')
   .post-content
-    !=partial('post/gallery')
     if post.excerpt && index
       !=post.excerpt
       if config.excerpt_link
