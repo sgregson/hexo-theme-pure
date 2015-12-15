@@ -11,3 +11,13 @@
 .u-cf:after {
   clear: both;
 }
+
+// Accessibly-hidden text
+// the snook.ca method (http://snook.ca/archives/html_and_css/hiding-content-for-accessibility)
+.a11y {
+  position: absolute !important;  // in case JS is trying to jack me up
+  height: 1px; width: 1px;        // minimum 1px otherwise VoiceOver doesn't read it
+  overflow: hidden;               // prevent visibility
+  clip: rect(1px 1px 1px 1px);    // Clip to rectangle [IE6, IE7]
+  clip: rect(1px, 1px, 1px, 1px); // clip to rectangle [errybody else]
+}
