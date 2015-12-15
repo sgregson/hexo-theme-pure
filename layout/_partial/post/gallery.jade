@@ -2,5 +2,5 @@ if post.photos && post.photos.length
   ul.post-gallery
     - post.photos.forEach(function (photo) {
       li.post-gallery-img(href!=url_for(post.path + photo))
-        img(src!=url_for(post.path + photo))
+        img(src!=url_for(post.path + photo) alt="#{photo}")
     - })
