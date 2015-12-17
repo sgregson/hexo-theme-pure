@@ -234,13 +234,13 @@ blockquote {
 
   img + & {
     // Stylized image caption
-    background: none;
-    margin: -0.7em 0 0;
+    background: 0;
+    margin: -0.75em 0 1em;
+    padding-right: 0;
     text-align: right;
-    border-right: 5px solid #999;
     border-left: 0;
     font-style: italic;
-    font-size: .8em;
+    font-size: .75em;
     > :first-child {
       margin: 0;
     }
