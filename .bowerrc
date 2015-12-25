@@ -1,0 +1,7 @@
+{
+  "directory": "source/bower/",
+  "analytics": false,
+  "shallowCloneHosts": [
+    "github.com"
+  ]
+}

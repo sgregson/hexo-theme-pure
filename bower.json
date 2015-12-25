@@ -1,0 +1,24 @@
+{
+  "name": "pure-hexo-theme-fork",
+  "homepage": "https://github.com/sgregson/hexo-theme-pure",
+  "description": "a fork of the Pure theme for Hexo static blogger",
+  "main": "css/style.scss",
+  "moduleType": [],
+  "authors": [
+    "spencer gregson <spencer.gregson@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "source/bower/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fira": "~0.1.0",
+    "font-awesome": "fontawesome#~4.5.0"
+  }
+}

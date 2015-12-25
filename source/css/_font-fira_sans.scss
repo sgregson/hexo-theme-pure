@@ -1,0 +1,20 @@
+// LIGHT
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../bower/fira/eot/FiraSans-Light.eot');
+    src: url('../bower/fira/eot/FiraSans-Light.eot?#iefix') format('embedded-opentype'),
+         url('../bower/fira/woff/FiraSans-Light.woff') format('woff'),
+         url('../bower/fira/ttf/FiraSans-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+// MEDIUM
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../bower/fira/eot/FiraSans-Medium.eot');
+    src: url('../bower/fira/eot/FiraSans-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../bower/fira/woff/FiraSans-Medium.woff') format('woff'),
+         url('../bower/fira/ttf/FiraSans-Medium.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
