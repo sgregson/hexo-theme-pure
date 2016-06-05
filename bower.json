@@ -19,6 +19,23 @@
   ],
   "dependencies": {
     "fira": "~0.1.0",
+    "jquery-2.1.4.min": "http://code.jquery.com/jquery-2.1.4.min.js",
     "font-awesome": "fontawesome#~4.5.0"
+  },
+  "install": {
+    "path": {
+      "/[c|sc|le]ss$/": "source/css/vendor/{name}",
+      "js": "source/js/vendor/{name}"
+    },
+    "sources": {
+      "fira": [
+        "**/*FiraSans-Light*",
+        "**/*FiraSans-Medium*"
+      ],
+      "font-awesome": [
+        "/fonts/*",
+        "/scss/*"
+      ]
+    }
   }
 }
